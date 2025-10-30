@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,9 +8,24 @@ import { Badge } from "./ui/badge";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const heroImages = [
+  "https://framerusercontent.com/images/hSwT5bZsymf6RUhRvIEtNbSbEo.png?width=3000&height=1962",
+  "https://framerusercontent.com/images/LuD6ZmkTnFD1B6thf3BADMXkfdE.png?width=3000&height=1962",
+  "https://framerusercontent.com/images/Wrpx7jqyDzGYbiuov4cHcUHj4g.png?width=3000&height=1962",
+  "https://framerusercontent.com/images/TVT3v1ul3h6FAtJlI3flGmdpYu4.png?width=3000&height=1962",
+];
+
 const Hero = () => {
   const heroRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     if (titleRef.current) {
@@ -71,24 +86,26 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <span className="word inline-block">Brands</span>
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.8 }}
-                className="inline-block px-6 py-3 bg-card rounded-3xl shadow-[var(--shadow-card)]"
+                key={currentImageIndex}
+                initial={{ scale: 0, rotate: -180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.5, ease: "backOut" }}
+                className="inline-block w-32 h-20 md:w-40 md:h-24 rounded-2xl overflow-hidden bg-card shadow-xl"
               >
-                <span className="word inline-block text-5xl md:text-7xl">✨</span>
+                <img src={heroImages[currentImageIndex]} alt="Project" className="w-full h-full object-cover" />
               </motion.div>
               <span className="word inline-block text-secondary">Grow</span>
             </div>
             <div className="flex flex-wrap justify-center gap-4 mt-4">
               <span className="word inline-block text-secondary">Fast</span>
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 1 }}
-                className="inline-block px-6 py-3 bg-card rounded-3xl shadow-[var(--shadow-card)]"
+                key={`${currentImageIndex}-2`}
+                initial={{ scale: 0, rotate: 180 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.5, ease: "backOut", delay: 0.1 }}
+                className="inline-block w-32 h-20 md:w-40 md:h-24 rounded-2xl overflow-hidden bg-card shadow-xl"
               >
-                <span className="word inline-block text-5xl md:text-7xl">🚀</span>
+                <img src={heroImages[(currentImageIndex + 1) % heroImages.length]} alt="Project" className="w-full h-full object-cover" />
               </motion.div>
               <span className="word inline-block">With us</span>
             </div>
