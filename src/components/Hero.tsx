@@ -63,7 +63,7 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center px-6 relative"
+      className="min-h-screen flex items-center justify-center px-6 relative bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(0,0%,95%),hsl(0,0%,98%))]"
     >
       <div className="max-w-6xl mx-auto text-center space-y-12">
         <motion.div
@@ -128,8 +128,9 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 1.4 }}
         >
           <Button
+            variant="cta"
             size="lg"
-            className="rounded-full px-8 py-6 text-lg bg-foreground text-background hover:bg-foreground/90 shadow-[var(--shadow-soft)] group"
+            className="rounded-full px-8 py-6 text-lg group"
           >
             Book a Meeting
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

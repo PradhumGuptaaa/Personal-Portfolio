@@ -59,7 +59,7 @@ const Process = () => {
   }, []);
 
   return (
-    <section id="process" ref={sectionRef} className="py-24 px-6">
+    <section id="process" ref={sectionRef} className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -92,15 +92,15 @@ const Process = () => {
           <h2 className="text-4xl md:text-6xl font-bold text-foreground">Here's how it works</h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {processSteps.map((step, index) => (
             <div
               key={step.number}
-              className="process-card p-8 bg-card rounded-3xl border border-border hover:shadow-xl transition-all duration-300"
+              className="process-card p-10 bg-card/50 backdrop-blur-sm rounded-[32px] border border-border/50 hover:bg-card/70 hover:border-border transition-all duration-500"
             >
-              <div className="text-6xl font-bold text-accent mb-4">{step.number}</div>
+              <div className="text-7xl font-bold text-foreground/20 mb-6">{step.number}</div>
               <h3 className="text-3xl font-bold text-foreground mb-4">{step.title}</h3>
-              <p className="text-muted-foreground text-lg">{step.description}</p>
+              <p className="text-muted-foreground text-lg leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>

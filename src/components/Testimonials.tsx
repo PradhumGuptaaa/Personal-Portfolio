@@ -17,7 +17,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 px-6 bg-card/30">
+    <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {testimonials.map((testimonial, index) => (
@@ -33,16 +33,16 @@ const Testimonials = () => {
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-full h-96 object-cover rounded-3xl shadow-lg"
+                  className="w-full h-[500px] object-cover rounded-[32px] shadow-lg"
                 />
               </div>
-              <div className="text-8xl font-bold text-accent mb-4">"</div>
-              <p className="text-xl md:text-2xl text-foreground font-medium mb-6 leading-relaxed">
+              <div className="text-8xl font-bold text-foreground/10 mb-4 leading-none">"</div>
+              <p className="text-xl md:text-2xl text-foreground font-normal mb-8 leading-relaxed">
                 {testimonial.quote}
               </p>
               <div>
-                <p className="text-lg font-bold text-foreground">{testimonial.name}</p>
-                <p className="text-muted-foreground">{testimonial.company}</p>
+                <p className="text-lg font-semibold text-foreground">{testimonial.name}</p>
+                <p className="text-muted-foreground text-base">{testimonial.company}</p>
               </div>
             </motion.div>
           ))}

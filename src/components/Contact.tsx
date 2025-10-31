@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 px-6">
+    <section id="contact" className="py-24 px-6 bg-[radial-gradient(ellipse_80%_50%_at_50%_120%,hsl(0,0%,92%),hsl(0,0%,98%))]">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -16,7 +16,7 @@ const Contact = () => {
           <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
             Feel free to contact me if having any questions. I'm available for new projects or just for chatting.
           </p>
-          <Button size="lg" className="rounded-full px-8 text-lg mb-16">
+          <Button variant="cta" size="lg" className="rounded-full px-8 py-6 text-lg mb-16">
             Book a Meeting →
           </Button>
         </motion.div>
