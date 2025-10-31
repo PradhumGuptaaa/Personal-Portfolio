@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import AnimatedBackground from "./AnimatedBackground";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 px-6 bg-[radial-gradient(ellipse_80%_50%_at_50%_120%,hsl(0,0%,92%),hsl(0,0%,98%))]">
-      <div className="max-w-4xl mx-auto text-center">
+    <section id="contact" className="py-24 px-6 relative overflow-hidden">
+      <AnimatedBackground variant="footer" />
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
