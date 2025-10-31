@@ -66,41 +66,41 @@ const Process = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <p className="text-sm text-accent mb-4 italic">Hello!</p>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-16">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12">
             We help brands grow with standout design, clear branding, and content that drives results.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-3 mb-20">
+          <div className="flex flex-wrap justify-center gap-4 mb-20">
             {services.map((service, index) => (
-              <motion.span
+              <motion.div
                 key={service}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-foreground text-lg font-normal"
+                className="px-6 py-3 bg-card rounded-full border border-border text-foreground"
               >
                 {service}
-              </motion.span>
+              </motion.div>
             ))}
           </div>
 
           <p className="text-sm text-accent mb-4 italic">Our Process, Explained</p>
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-16">Here's how it works</h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-foreground">Here's how it works</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {processSteps.map((step, index) => (
             <div
               key={step.number}
-              className="process-card p-12 bg-background rounded-3xl border-0"
+              className="process-card p-10 bg-card/50 backdrop-blur-sm rounded-[32px] border border-border/50 hover:bg-card/70 hover:border-border transition-all duration-500"
             >
-              <div className="text-8xl font-bold text-foreground mb-8">{step.number}</div>
-              <h3 className="text-3xl font-bold text-foreground mb-6">{step.title}</h3>
-              <p className="text-muted-foreground text-base leading-relaxed">{step.description}</p>
+              <div className="text-7xl font-bold text-foreground/20 mb-6">{step.number}</div>
+              <h3 className="text-3xl font-bold text-foreground mb-4">{step.title}</h3>
+              <p className="text-muted-foreground text-lg leading-relaxed">{step.description}</p>
             </div>
           ))}
         </div>

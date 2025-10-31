@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import AnimatedBackground from "./AnimatedBackground";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,9 +63,8 @@ const Hero = () => {
   return (
     <section
       ref={heroRef}
-      className="min-h-screen flex items-center justify-center px-6 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center px-6 relative bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,hsl(0,0%,95%),hsl(0,0%,98%))]"
     >
-      <AnimatedBackground variant="hero" />
       <div className="max-w-6xl mx-auto text-center space-y-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}

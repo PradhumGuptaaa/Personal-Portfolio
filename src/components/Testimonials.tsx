@@ -19,7 +19,7 @@ const Testimonials = () => {
   return (
     <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
@@ -27,25 +27,23 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.8 }}
-              className="flex flex-col"
+              className="relative"
             >
-              <div className="mb-8 order-1">
+              <div className="mb-8">
                 <img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-full h-[600px] object-cover rounded-3xl"
+                  className="w-full h-[500px] object-cover rounded-[32px] shadow-lg"
                 />
               </div>
-              <div className="order-2">
-                <div className="mb-6">
-                  <p className="text-lg font-bold text-foreground">{testimonial.name}</p>
-                  <p className="text-muted-foreground text-sm">{testimonial.company}</p>
-                </div>
-                <h3 className="text-2xl md:text-3xl text-foreground font-normal leading-relaxed">
-                  {testimonial.quote}
-                </h3>
+              <div className="text-8xl font-bold text-foreground/10 mb-4 leading-none">"</div>
+              <p className="text-xl md:text-2xl text-foreground font-normal mb-8 leading-relaxed">
+                {testimonial.quote}
+              </p>
+              <div>
+                <p className="text-lg font-semibold text-foreground">{testimonial.name}</p>
+                <p className="text-muted-foreground text-base">{testimonial.company}</p>
               </div>
-              <div className="text-9xl font-bold text-foreground order-3 mt-8">"</div>
             </motion.div>
           ))}
         </div>
