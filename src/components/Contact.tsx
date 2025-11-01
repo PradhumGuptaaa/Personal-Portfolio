@@ -28,7 +28,7 @@ const Contact = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="pt-12 border-t border-border"
         >
-          <p className="text-muted-foreground mb-4">© Denqid, 2025</p>
+          <p className="text-muted-foreground mb-4">© Pradhum, 2025</p>
           <div className="flex justify-center gap-6">
             <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
               Legal Notice

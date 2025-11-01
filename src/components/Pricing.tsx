@@ -100,10 +100,10 @@ const Pricing = () => {
                 alt="Testimonial"
                 className="w-full rounded-3xl shadow-lg mb-6"
               />
-              <p className="text-xl font-bold text-foreground mb-2">David Krzemien</p>
+              <p className="text-xl font-bold text-foreground mb-2">Pradhum Gupta</p>
               <p className="text-muted-foreground mb-4">FeuersteinCars</p>
               <p className="text-lg text-foreground leading-relaxed italic">
-                "Deniz created a website for us that exceeded all expectations. Professional, creative, and reliable. 
+                "Pradhum created a website for us that exceeded all expectations. Professional, creative, and reliable. 
                 No one could have done it better. He is simply the best designer in the World."
               </p>
             </div>

@@ -23,8 +23,8 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <img
-              src="https://framerusercontent.com/images/boOrvMBcGeR7Ud15hZnLfaL7heQ.jpg?width=1080&height=1073"
-              alt="Deniz Ulmer"
+              src="./profile_photo.png"
+              alt="Pradhum Gupta"
               className="w-full rounded-3xl shadow-2xl"
             />
           </motion.div>
@@ -37,19 +37,19 @@ const About = () => {
             className="space-y-6"
           >
             <div>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Deniz Ulmer</h3>
-              <p className="text-accent text-xl">Denqid, Founder</p>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Pradhum Gupta</h3>
+              <p className="text-accent text-xl">Pradhum, Founder</p>
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Deniz is a UI/UX designer from Germany — Stuttgart who blends function with emotion. 
+              Pradhum is a UI/UX designer from India — Stuttgart who blends function with emotion. 
               As a Framer, Contra, and Shopify Partner, he helps startups and companies create clear 
               interfaces, strong brands, and inspiring digital experiences.
             </p>
 
             <div className="space-y-4 pt-6">
               {[
-                { role: "Founder", company: "Denqid", period: "2024 → Now" },
+                { role: "Founder", company: "Pradhum", period: "2024 → Now" },
                 { role: "Framer Partner", company: "Framer", period: "2024 → Now" },
                 { role: "Contra Partner", company: "Contra", period: "2024 → Now" },
                 { role: "Google Partner", company: "Google", period: "2023 → Now" },

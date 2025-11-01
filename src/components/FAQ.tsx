@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "Do you offer development too?",
-    answer: "Denqid focuses on design and Branding only, but all deliverables are dev-ready.",
+    answer: "Pradhum focuses on design and Branding only, but all deliverables are dev-ready.",
   },
   {
     question: "Can I pause the Branding?",
@@ -80,7 +80,7 @@ const FAQ = () => {
           className="text-center bg-card rounded-3xl p-8 border border-border"
         >
           <img
-            src="https://framerusercontent.com/images/tdMAAOQgGX3QdjxUBBKpxISknGU.png?width=1024&height=1024"
+            src="./profile_photo2.PNG"
             alt="Contact"
             className="w-32 h-32 mx-auto mb-6 rounded-2xl"
           />
@@ -88,8 +88,8 @@ const FAQ = () => {
             Have more questions? Book a free discovery call
           </h3>
           <p className="text-muted-foreground mb-2">Or, email me at</p>
-          <a href="mailto:hello@denqid.com" className="text-accent hover:underline text-lg">
-            hello@denqid.com
+          <a href="gmail.com" className="text-accent hover:underline text-lg">
+            hello@pradhum.com
           </a>
         </motion.div>
       </div>
